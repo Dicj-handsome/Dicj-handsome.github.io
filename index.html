@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 张三</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            line-height: 1.6;
+        }
+
+        /* 导航样式 */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #3498db;
+            border-radius: 4px;
+        }
+
+        /* 主要内容区域 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 各部分公共样式 */
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 自我介绍 */
+        #about {
+            text-align: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 1rem auto;
+            display: block;
+        }
+
+        /* 项目卡片 */
+        .project-card {
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: #f8f9fa;
+        }
+
+        /* 时间轴样式 */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #3498db;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: #3498db;
+            border-radius: 50%;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links a {
+                padding: 0.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#projects">项目经历</a></li>
+            <li><a href="#education">学习经历</a></li>
+            <li><a href="#overseas">海外经历</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- 自我介绍 -->
+        <section id="about">
+            <img src="your-avatar.jpg" alt="头像" class="avatar">
+            <h1>张三</h1>
+            <p>全栈开发者 | 技术爱好者 | 环球旅行者</p>
+            <p>5年全栈开发经验，精通React、Node.js和Python，曾在3个国家工作学习...</p>
+        </section>
+
+        <!-- 项目经历 -->
+        <section id="projects">
+            <h2>项目经历</h2>
+            <div class="project-card">
+                <h3>智能博客系统 (2023)</h3>
+                <p>技术栈：React + Node.js + MongoDB</p>
+                <p>• 开发支持Markdown的博客系统，实现自动化部署<br>
+                   • 集成第三方评论系统和访问统计功能</p>
+            </div>
+            <div class="project-card">
+                <h3>电商数据分析平台 (2022)</h3>
+                <p>技术栈：Python + Django + ECharts</p>
+                <p>• 构建数据可视化看板，提升运营决策效率30%<br>
+                   • 实现自动化数据清洗和报表生成</p>
+            </div>
+        </section>
+
+        <!-- 学习经历 -->
+        <section id="education">
+            <h2>学习经历</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>XX大学 - 计算机科学硕士 (2020-2022)</h3>
+                    <p>研究方向：人工智能与机器学习</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>XX大学 - 软件工程学士 (2016-2020)</h3>
+                    <p>主修课程：数据结构、算法设计、操作系统</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 海外经历 -->
+        <section id="overseas">
+            <h2>海外经历</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>德国柏林技术交流 (2021.07-2021.12)</h3>
+                    <p>• 参与欧盟数字人才培养计划<br>
+                       • 主导跨文化团队开发项目</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>新加坡国立大学交换生 (2019.02-2019.07)</h3>
+                    <p>• 选修人工智能与大数据课程<br>
+                       • 参与东南亚市场数字化研究项目</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
